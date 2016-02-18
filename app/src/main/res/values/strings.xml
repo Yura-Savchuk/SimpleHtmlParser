@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SimpleHtmlParser</string>
+    <string name="read">read</string>
+    <string name="export_to_cv">Export to CV</string>
+</resources>
