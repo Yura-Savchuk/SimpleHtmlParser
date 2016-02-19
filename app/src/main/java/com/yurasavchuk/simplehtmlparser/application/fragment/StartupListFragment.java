@@ -32,7 +32,7 @@ public class StartupListFragment extends Fragment {
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-
+  
         }
     };
 }
