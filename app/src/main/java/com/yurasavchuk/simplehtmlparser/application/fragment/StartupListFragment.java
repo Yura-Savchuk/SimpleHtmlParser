@@ -10,6 +10,11 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.yurasavchuk.simplehtmlparser.R;
+import com.yurasavchuk.simplehtmlparser.datacontroller.Callback;
+import com.yurasavchuk.simplehtmlparser.datacontroller.StartupLiteController;
+import com.yurasavchuk.simplehtmlparser.datacontroller.model.StartupLiteModel;
+
+import java.util.ArrayList;
 
 /**
  * Created by android on 18.02.16.
@@ -18,6 +23,12 @@ public class StartupListFragment extends Fragment {
 
     private ListView mListView;
     private Button mExportButton;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        StartupLiteController.getList(mCallback);
+    }
 
     @Nullable
     @Override
@@ -32,7 +43,19 @@ public class StartupListFragment extends Fragment {
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-  
+
+        }
+    };
+
+    private Callback<ArrayList<StartupLiteModel>> mCallback = new Callback<ArrayList<StartupLiteModel>>() {
+        @Override
+        public void onResult(ArrayList<StartupLiteModel> result) {
+
+        }
+
+        @Override
+        public void onError(String message) {
+
         }
     };
 }
